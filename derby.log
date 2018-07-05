@@ -1,17 +1,6 @@
 ----------------------------------------------------------------
-<<<<<<< HEAD
-Thu Jul 05 00:06:57 IST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0164-6695-49d2-00000add1c38 
-on database directory memory:F:\Programs\Git-Ecllipse\Spring Boot JPA\testdb with class loader sun.misc.Launcher$AppClassLoader@6d06d69c 
-Loaded from file:/C:/Users/Seethend/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_161-b12
-user.dir=F:\Programs\Git-Ecllipse\Spring Boot JPA
-os.name=Windows 10
-os.arch=amd64
-=======
-Wed Jul 04 18:16:13 IST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0164-6554-2ef9-00000127f638 
+Thu Jul 05 12:31:04 IST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0164-693e-8c5a-0000014f82d8 
 on database directory memory:D:\Git\Spring-MVC\SpringJPA\testdb with class loader sun.misc.Launcher$AppClassLoader@1d16e93 
 Loaded from file:/D:/ND65000/PARTS/MavenJars/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
 java.vendor=Oracle Corporation
@@ -19,7 +8,6 @@ java.runtime.version=1.8.0_92-b14
 user.dir=D:\Git\Spring-MVC\SpringJPA
 os.name=Windows 10
 os.arch=x86
->>>>>>> branch 'master' of https://github.com/seethend/Spring-JPA.git
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
