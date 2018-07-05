@@ -41,6 +41,7 @@ public class CourseContorller {
 	@RequestMapping(value="/updcourse/{courseId}",method=RequestMethod.POST)
 	public String postUpdateCourse(ModelMap model, @PathVariable String topicId, @ModelAttribute Course course, @PathVariable String courseId){
 		course.setTopic(new Topic(topicId,""));
+		System.out.println(course);
 		courseService.updateCourse(course);
 		model.addAttribute("success", "Updated: "+course);
 		return "updcourse";
