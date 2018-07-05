@@ -15,6 +15,17 @@ public class Course {
 	
 	@ManyToOne
 	private Topic topic;
+	
+	public Course() {
+		
+	}
+
+	public Course(String id, String name, Topic topic) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.topic = topic;
+	}
 
 	public String getId() {
 		return id;
@@ -39,4 +50,11 @@ public class Course {
 	public void setTopic(Topic topic) {
 		this.topic = topic;
 	}
+
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", name=" + name + ", topic=" + topic + "]";
+	}
+	
+	
 }

@@ -13,23 +13,45 @@ import com.seeth.springmvc.models.Topic;
 import com.seeth.springmvc.services.CourseService;
 
 @Controller
+@RequestMapping(value="/topics/{topicId}")
 public class CourseContorller {
 	
 	@Autowired
 	CourseService courseService;
 	
-	@RequestMapping(value="/topics/{topicId}/inscourse",method=RequestMethod.GET)
+	@RequestMapping(value="/inscourse",method=RequestMethod.GET)
 	public String getInsertCourse(ModelMap model){
 		return "inscourse";
 	}
 	
-	@RequestMapping(value="/topics/{topicId}/inscourse",method=RequestMethod.POST)
+	@RequestMapping(value="/inscourse",method=RequestMethod.POST)
 	public String postInsertCourse(ModelMap model, @PathVariable String topicId, @ModelAttribute Course course){
 		course.setTopic(new Topic(topicId,""));
 		courseService.insertCourse(course);
+		model.addAttribute("success", "Inserted: "+course);
 		return "inscourse";
 	}
 	
+	@RequestMapping(value="/updcourse/{courseId}",method=RequestMethod.GET)
+	public String getUpdateCourse(ModelMap model,@PathVariable String courseId){
+		model.addAttribute("id", courseId);
+		return "updcourse";
+	}
+	
+	@RequestMapping(value="/updcourse/{courseId}",method=RequestMethod.POST)
+	public String postUpdateCourse(ModelMap model, @PathVariable String topicId, @ModelAttribute Course course, @PathVariable String courseId){
+		course.setTopic(new Topic(topicId,""));
+		courseService.updateCourse(course);
+		model.addAttribute("success", "Updated: "+course);
+		return "updcourse";
+	}
+	
+	@RequestMapping(value="/delcourse/{courseId}")
+	public String deleteCourseById(ModelMap model, @PathVariable String courseId, @PathVariable String topicId){
+		courseService.deleteCourseById(courseId);
+		model.addAttribute("success", "deleted Course with id: "+courseId);
+		return "delcourse";
+	}
 	
 
 }

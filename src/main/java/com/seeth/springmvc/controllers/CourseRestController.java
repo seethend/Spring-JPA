@@ -11,14 +11,20 @@ import com.seeth.springmvc.models.Course;
 import com.seeth.springmvc.services.CourseService;
 
 @RestController
+@RequestMapping(value="/topics/{topicId}")
 public class CourseRestController {
 	
 	@Autowired
 	CourseService courseService;
 	
-	@RequestMapping(value="/topics/{topicId}/courses")
+	@RequestMapping(value="/courses")
 	public List<Course> showAllCourses(@PathVariable String topicId){
 		return courseService.getAllCourses(topicId);
+	}
+	
+	@RequestMapping(value="/course/{courseId}")
+	public Course getCourseById(@PathVariable String courseId){
+		return courseService.getCourseById(courseId);
 	}
 	
 }

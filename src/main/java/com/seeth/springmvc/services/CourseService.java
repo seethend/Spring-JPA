@@ -22,6 +22,18 @@ public class CourseService {
 		courseRepository.save(course);
 	}
 
+	public Course getCourseById(String courseId) {
+		return courseRepository.findById(courseId).get();
+	}
+
+	public void updateCourse(Course course) {
+		courseRepository.save(course);
+	}
+
+	public void deleteCourseById(String courseId) {
+		courseRepository.deleteById(courseId);
+	}
+
 	
 	
 
