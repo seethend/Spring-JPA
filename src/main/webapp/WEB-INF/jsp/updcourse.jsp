@@ -10,7 +10,7 @@
 
 	<form method="post">
 		<pre>
-			ID : <input type="text" name="id" value="${id}" disabled="disabled"><br><br>
+			ID : <input type="text" name="id" value="${id}"><br><br>
 			Name: <input type="text" name="name"><br><br>
 			<input type="submit" value="Submit">
 		</pre>
